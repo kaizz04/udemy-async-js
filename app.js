@@ -2,6 +2,17 @@ const button = document.querySelector('button');
 const output = document.querySelector('p');
 
 function trackUserHandler() {
+  navigator.geolocation.getCurrentPosition(
+    postData=>{
+      console.log(postData);
+    },
+    error=>{
+      console.log(error);
+    }
+  );
+  setTimeout(()=>{
+    console.log('timeout...');
+  },0);
   console.log('Clicked!');
 }
 
@@ -16,4 +27,4 @@ for(let i=0;i< 100000000;i++){
   result+=i;
 
 }
-console.log(result);
+// console.log(result);
